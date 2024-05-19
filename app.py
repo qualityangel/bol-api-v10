@@ -3,7 +3,7 @@ from tkinter import ttk
 import customtkinter as ctk
 import csv
 from datetime import datetime
-from bol import client as bol  # Gebruik de juiste import
+from client import Client  # Gebruik de juiste import
 
 # Kleuren uit de afbeelding
 LIGHT_BLUE = "#7EDDD8"
@@ -418,9 +418,9 @@ class SalesOrderDashboard(ctk.CTk):
         return False
 
 if __name__ == "__main__":
-    client_id = "Your client-id"
+    client_id = "Your-ID"
     client_secret = "Your-secret"
-    client = bol.Client(client_id, client_secret)
+    client = Client(client_id, client_secret)
     
     app = SalesOrderDashboard(client)
     app.mainloop()
